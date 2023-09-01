@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-200">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <!-- FaavIcon -->
+    <link rel="shortcut icon" href="./images/Logo - Copy.png" type="image/x-icon">
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <style>
+        .btn-bg{
+            background-color: rgba(37, 37, 37, 0.20);
+        }
+        .author-bg{
+            color: rgba(23, 23, 23, 0.70);
+        }
+        .red-btn{
+            background-color: #FF1F3D;
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <header class="mt-5 px-10 mx-auto bg-gray-200">
+        <div class="navbar  border-b-4">
+            <div class="navbar-start">
+              <a class="btn btn-ghost normal-case text-xl"><img src="./images/Logo.png" alt=""></a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <a onclick="sortByView('1000')" id="sort" class="btn-bg text-black border-none rounded-lg px-4 py-2 hover:scale-105 cursor-pointer font-semibold">Sort By Views</a>
+            </div>
+            <div class="navbar-end">
+              <a href="Blog.html" class=" red-btn text-white border-none rounded-lg px-4 py-2 hover:bg-black cursor-pointer font-semibold">Blog</a>
+            </div>
+        </div>
+        <hr class="border-neutral-600">
+        <div class="flex justify-center mt-5 lg:hidden">
+            <a onclick="sortByView('1000')" id="sort" class="btn-bg text-black border-none rounded-lg px-4 py-2 hover:scale-105 cursor-pointer font-semibold">Sort By Views</a>
+        </div>
+    </header>
+    <!-- Main section -->
+    <main class="mt-10">
+        <!-- button section -->
+        <section id="btn-container" class="flex justify-center gap-4 lg:gap-10">
+        </section>
+        <!-- video section -->
+        <section id="video-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 mx-10">
+            <!-- <p class="hidden" id="time"></p> -->
+        </section>
+        <!-- video not found -->
+        <section id="video-not-found" class="place-content-center grid justify-items-center mt-10">
+        </section>
+    </main>
+
+
+    <script src="./Scripts/app.js"></script>
+</body>
+</html>
