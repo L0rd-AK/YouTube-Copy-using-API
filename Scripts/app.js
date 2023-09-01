@@ -6,7 +6,15 @@ const sortByView=async(id)=>{
     sortedArray.sort(function (a, b) {return parseFloat(b.others.views)*1000 - parseFloat(a.others.views)*1000});
     DisplayCard(sortedArray);
 }
-
+// sorting on different page
+const sortBycatagory=async()=>{
+    const removeRed=document.getElementsByClassName('catagory-btn-four');
+    for (let i = 0; i < removeRed.length; i++) {
+        if(removeRed[i].classList.contains('red-btn')){
+            sortByView(removeRed[i].getAttribute('id'));
+        }
+    }
+}
 
 const btn_catagory=async()=>{
     const res=await fetch('https://openapi.programming-hero.com/api/videos/categories');
@@ -60,18 +68,15 @@ const makeRed=async(ID)=>{
     const makered=document.getElementById(ID);
     makered.classList=`catagory-btn-four red-btn text-white cursor-pointer font-medium rounded-lg px-5 py-3`;
 }
-// make first btn red
-function makeALLRed(ID){
-    const red=document.getElementById('1000');
-    red.classList=`catagory-btn-four red-btn text-white cursor-pointer font-medium rounded-lg px-5 py-3`;
-}
+
+//
 // display video card
 const DisplayCard = cards=>{
     const video_container=document.getElementById('video-container');
     video_container.innerText='';
     const not_found=document.getElementById('video-not-found');
     not_found.innerText='';
-    cards.forEach(card => {
+        cards.forEach(card => {
         const timestamp = parseInt(card?.others?.posted_date);
         const hours = Math.floor(timestamp / 3600);
         const minutes = Math.floor((timestamp % 3600) / 60);
@@ -181,5 +186,5 @@ const DisplayCard = cards=>{
 btn_catagory();
 video_catagory("1000");
 // console.log("fuck");
-makeALLRed("1000");
-console.log("bok");
+
+
