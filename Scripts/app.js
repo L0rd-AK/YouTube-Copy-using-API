@@ -69,6 +69,8 @@ function makeALLRed(ID){
 const DisplayCard = cards=>{
     const video_container=document.getElementById('video-container');
     video_container.innerText='';
+    const not_found=document.getElementById('video-not-found');
+    not_found.innerText='';
     cards.forEach(card => {
         const timestamp = parseInt(card?.others?.posted_date);
         const hours = Math.floor(timestamp / 3600);
