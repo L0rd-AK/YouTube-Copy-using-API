@@ -29,7 +29,7 @@ function itemNotFount(){
         const tempDiv=document.createElement('div');
         // style="width:250px; height:250px"
             tempDiv.innerHTML=`
-            <img src="./images/icon.png" alt="">
+            <img src="./images/Icon.png" alt="">
             <h1 class="text-3xl text-black font-bold">Oops!! Sorry, There is no<br>content here</h1>
             `
         tempDiv.classList=`grid justify-items-center`;
