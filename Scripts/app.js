@@ -60,9 +60,7 @@ const DisplayButtons = buttons=>{
 
 const makeRed=async(ID)=>{    
     const removeRed=document.getElementsByClassName('catagory-btn-four');
-    // console.log(removeRed); .style.backgroundColor = "rgba(37, 37, 37, 0.20)"
     for (let i = 0; i < removeRed.length; i++) {
-        // console.log(removeRed[i]);
         removeRed[i].classList=`catagory-btn-four btn-bg text-black cursor-pointer font-medium rounded-lg px-4 py-2`;
     }
     const makered=document.getElementById(ID);
@@ -185,6 +183,6 @@ const DisplayCard = cards=>{
 
 btn_catagory();
 video_catagory("1000");
-// console.log("fuck");
+
 
 
