@@ -4,7 +4,9 @@ const sortByView=async(id)=>{
     const data= await res.json();
     const sortedArray=data.data;
     sortedArray.sort(function (a, b) {return parseFloat(b.others.views)*1000 - parseFloat(a.others.views)*1000});
-    DisplayCard(sortedArray);
+    if(data.status)  DisplayCard(sortedArray);
+    else itemNotFount();
+    
 }
 // sorting on different page
 const sortBycatagory=async()=>{
